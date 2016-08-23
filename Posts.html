@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Posts</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <div class="header-wrap">
+        <div class="header">
+            <div class="logo"><h1>Top10Games</h1></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Home.html" >Home</a></li>
+                    <li><a href="About.html" class="active">About Top10Games</a></li>
+                    <li><a href="Top10.html">Rates</a></li>
+                    <li><a href="Posts.html">Posts</a></li>
+                    <li><a href="Login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        Strategy
+        <h1>XCOM2</h1>
+        <h3>Release date: Feb 4, 2016 ▪ Developer: Firaxis ▪ Our review (94%)</h3>
+        It has been 20 years since humanity lost the war against the aliens. <a href="#" id="showTextLinkS1" onclick="showTextS1()">(read more)</a><span id="hiddenTextS1" style="display:none">
+        A new order exists on Earth and the aliens have power over everything. They have brought in new technology and resources that promise a brighter future for the Earth, but they are concealing a very evil agenda. The
+        disavowed XCOM forces must rise from the shadows and fight back to reclaim their home planet or die trying. Players take control of an alien ship that has been converted to their mobile headquarters. Combat enemy
+        operations, guide your strike team and grow popular support as you inch your way to destroy the alien occupation.</span>
 
+        <h1>Total War: Warhammer</h1>
+        <h3>Release date: May 24, 2016 ▪ Developer: Creative Assembly ▪ Our review (86%)</h3>
+        The first game in the Warhammer series to feature a fantasy world filled with monsters, warriors, and heroes.<a href="#" id="showTextLinkS2" onclick="showTextS2()">(read more)</a><span id="hiddenTextS2" style="display:none">
+        Warhammer is the 10th installment in the Total War series and players can control any of the four factions – the Empire, the Greenskins, the Dwarfs or the Vampire Counts. Warhammer brings back the tried and tested
+        elements of the previous games like city-building, unit-building and diplomacy settings. However, there are a huge number of animations and over 30 different types of skeletons and body types added to the game.</span>
+
+        <h1>HeartsOfIron4</h1>
+        <h3>Release date: June 6, 2016 ▪ Developer: Paradox ▪ Our review (88%)</h3>
+        “The AI may not always be sensible, and maybe combat doesn't always seem quite historically accurate,”<a href="#" id="showTextLinkS3" onclick="showTextS3()">(read more)</a><span id="hiddenTextS3" style="display:none">
+        wrote Rob in our review, “but then, you might be playing a version of World War 2 where Italy broke away from Germany to create a new Roman Empire with Yugoslavia, and the Soviet Union was plunged into civil war and
+        Stalin was deposed by 1942.”</span>
+    </div>
+    <script>
+        function showTextS1() {
+            document.getElementById('hiddenTextS1').style.display= 'inline';
+            document.getElementById('showTextLinkS1').style.display = 'none';
+        }
+        function showTextS2() {
+            document.getElementById('hiddenTextS2').style.display= 'inline';
+            document.getElementById('showTextLinkS2').style.display = 'none';
+        }
+        function showTextS3() {
+            document.getElementById('hiddenTextS3').style.display= 'inline';
+            document.getElementById('showTextLinkS3').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

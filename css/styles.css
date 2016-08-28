@@ -1,6 +1,6 @@
 /*GLOBALS*/
 *{padding:0; margin:0;}
-body{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#1491c1; background:url(../images/bg.jpg) repeat;}
+body{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#1491c1; background:url(../images/background.jpg) repeat;}
 img{border:none;}
 h1{ font-family: 'Droid Serif', serif; font-weight:normal; color:#0e5295;}
 h2{ font-family: 'Droid Serif', serif; font-weight:normal; color:#0e5295; font-size:18px;}
@@ -99,6 +99,15 @@ h1{ float:top;}
 .copyright .content a{ text-decoration:none; color:#1491c1;}
 .copyright .content a:hover{color:#062c5b;}
 .copyright .content a.active{color:#062c5b;}
+
+/*LOGIN*/
+
+.Login-form { background:#0d3d78; padding:30px; width:440px; float:left;}
+.Login-form label {display: block; padding:10px 0 10px 0;}
+.Login-form label span {display: block; color:#fff;font-size:14px; float:left; width:80px; text-align:left; padding:5px 20px 0 0; font-family: 'Droid Serif', serif;}
+.Login-form .input_text {padding:10px 10px;width:318px;background:#07366b; border:none; color:#fff; outline:none;}
+.Login-form .message{padding:10px 10px;width:318px; background:#07366b; border:none; overflow:hidden;height:150px; color:#fff; font-size:14px; outline:none;}
+.Login-form .button{padding:8px;background:#1491c1; color:#ffffff; text-transform:uppercase; font-family:'Oswald', sans-serif;border:0px solid;margin-left:100px;margin-top:20px;}
 
 /*StarRaiting*/
 

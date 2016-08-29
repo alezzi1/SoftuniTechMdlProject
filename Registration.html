@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sing Up</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery-3.0.0.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
 <body>
 <div class="header-wrap">
@@ -11,12 +13,12 @@
         <div class="logo"><h1>TopGames</h1></div>
         <div class="menu">
             <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Top10.html">Rates</a></li>
-                <li><a href="NewPost.html">New Post</a></li>
-                <li><a href="Posts.html">Posts</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="Home.html" id="home">Home</a></li>
+                <li><a href="Top10.html" id="rates">Rates</a></li>
+                <li><a href="NewPost.html" id="newPost">New Post</a></li>
+                <li><a href="Posts.html" id="posts">Posts</a></li>
+                <li><a href="Login.html" id="login">Log In</a></li>
+                <li><a href="Registration.html" id="reg">Sing Up</a></li>
             </ul>
         </div>
     </div>
@@ -35,7 +37,7 @@
                         <li><a href="#">gameTwo</a></li>
                         <li><a href="#">gameTree</a></li>
                         <li><a href="#">gameFour</a></li>
-                        <li class="bor-bottm-non"><a href="#">gameFive</a></li>
+                        <li class="bor-bottom-non"><a href="#">gameFive</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,14 +51,15 @@
                 </div>
                 <div class="panel">
                     <div class="content">
-                        <form id="formRegistration">
+                        <form id="formRegister">
                             <div class="Login-form mar-top30">
                                 <label> <span>Username:</span>
-                                    <input type="text" class="input_text" name="name" id="name"/>
+                                    <input type="text" id="registerUser" class="input_text" required="required"/>
                                 </label>
                                 <label> <span>Password:</span>
-                                    <input type="text" class="input_text" name="pass" id="pass"/>
+                                    <input type="password" id="registerPass" class="input_text" required="required"/>
                                 </label>
+                                <label><input type="submit" id="registerButton" value="Sing Up"/></label>
                             </div>
                         </form>
                     </div>

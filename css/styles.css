@@ -79,6 +79,15 @@ h1{ float:top;}
 
 /*JavaScript*/
 
+/*NEWPOST*/
+
+.Post-form { background:#0d3d78; padding:30px; width:440px; float:left;}
+.Post-form label {display: block; padding:10px 0 10px 0;}
+.Post-form label span {display: block; color:#fff;font-size:14px; float:left; width:80px; text-align:left; padding:5px 20px 0 0; font-family: 'Droid Serif', serif;}
+.Post-form .input_text {padding:10px 10px;width:318px;background:#07366b; border:none; color:#fff; outline:none;}
+.Post-form .message{padding:10px 10px;width:318px; background:#07366b; border:none; overflow:hidden;height:150px; color:#fff; font-size:14px; outline:none;}
+.Post-form .button{padding:8px;background:#1491c1; color:#ffffff; text-transform:uppercase; font-family:'Oswald', sans-serif;border:0px solid;margin-left:100px;margin-top:20px;}
+
 /*FOOTER*/
 .footer-wrap{ background:#1491c1; overflow:hidden;}
 .footer{ width:960px; margin:0 auto; padding:40px 0px 50px 0px; overflow:hidden;}

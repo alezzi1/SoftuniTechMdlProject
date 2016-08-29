@@ -1,14 +1,9 @@
-(function () {
 
-    let baseUrl = "https://baas.kinvey.com";
-    let appKey = "kid_HyI6vATc";
-    let appSecret = "5e35540b0af04582b1c1e32136737d5b";
-    let _guestCredentials = "9a4f7319-7a0b-4f05-848a-e0ef7c237bb5.Qh/NzEG4MKzIqJ5+1dRPsL3s5EWpzRAB7gYPkY+W5yY=";
-
-    let authService = new AuthorizationService(baseUrl, appKey, appSecret, _guestCredentials);
-    let requester = new Requester(authService);
-
+    const kinveyServiceBaseUrl = "https://baas.kinvey.com";
+    const kinveyAppID = "kid_HyI6vATc";
+    const kinveyAppSecret = "5e35540b0af04582b1c1e32136737d5b";
     const appUrl = kinveyServiceBaseUrl + "user/" + kinveyAppID;
+    let _guestCredentials = "9a4f7319-7a0b-4f05-848a-e0ef7c237bb5.Qh/NzEG4MKzIqJ5+1dRPsL3s5EWpzRAB7gYPkY+W5yY=";
 
     function showView(viewID) {
         $('main > section').hide();
@@ -17,14 +12,16 @@
     }
 
     $(function () {
+        
+        $('#home').click("home");
+        $('#rates').click('rates');
+        $('#newPost').click('newPost');
+        $('#posts').click('posts');
+        $('#login').click('login');
+        $('#reg').click('reg');
+
         showHideNavigationLinks();
-        showView('viewHome');
-        $('#link-home').click(showHomeView);
-        $('#link-login').click(showLoginView);
-        $('#link-register').click(showRegisterView);
-        $('#link-list-books').click(listBooks);
-        $('#link-create-books').click(showCreateBookView);
-        $('#link-logout').click(logout);
+        showView();
 
         $('#formLogin').submit(function (e) {
             e.preventDefault();
@@ -48,44 +45,29 @@
             addBookComment(JSON.parse(bookData), commentText, commentAuthor);
         });
     });
-    $(document).on({
-        ajaxStart: function () {
-            $('#loadingBox').show()
-        },
-        ajaxStop: function () {
-            $('#loadingBox').hide()
-        }
-    })
 
     function showHideNavigationLinks() {
         let loggedIn = sessionStorage.getItem('authToken') != null;
         if (loggedIn) {
-
-            $('#link-login').hide();
-            $('#link-register').hide();
-            $('#link-list-books').show();
-            $('#form-createBook').show();
-            $('#link-logout').show();
+            
+            $('#home').show();
+            $('#rates').show();
+            $('#newPost').show();
+            $('#posts').show();
+            $('#login').hide();
+            $('#reg').hide();
 
 
         }
         else {
-            $('#link-register').show();
-            $('#link-login').show();
-            $('#link-home').show();
-            $('#link-logout').hide();
-            $('#link-list-books').hide();
-            $('#form-createBook').hide();
+            $('#home').show();
+            $('#rates').show();
+            $('#newPost').hide();
+            $('#posts').show();
+            $('#login').show();
+            $('#reg').show();
 
         }
-    }
-
-    function showHomeView() {
-        showView('viewHome')
-    }
-
-    function showLoginView() {
-        showView('viewLogin')
     }
 
     function login() {
@@ -111,18 +93,6 @@
         }
     }
 
-    function showInfo(message) {
-        $('#infoBox').text(message);
-        $('#infoBox').show();
-        setTimeout(function () {
-            $('#infoBox').fadeOut()
-        }, 3000);
-    }
-
-    function showRegisterView() {
-        showView('viewRegister');
-    }
-
     function register() {
         let authBase64 = btoa(kinveyAppID + ':' + kinveyAppSecret);
         let appUrl = kinveyServiceBaseUrl + "user/" + kinveyAppID + '/';
@@ -142,15 +112,6 @@
             },
             error: handleAjaxError
         });
-    }
-
-
-    function showListBooksView() {
-        showView('viewListBook')
-    }
-
-    function showCreateBookView() {
-        showView('viewCreateBook')
     }
 
     function createBook() {
@@ -297,4 +258,3 @@
     function showCommentBox() {
         $('#add-comment').show()
     }
-});

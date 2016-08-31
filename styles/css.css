@@ -36,16 +36,17 @@ a:hover{color:#fff;}
 .page-content .content p{ padding-bottom:15px;}
 
 /*HEADER*/
-.header-wrap{ background:#083266; height:164px;}
+.header-wrap{ background:url("../images/background-header.jpg"); height:164px;}
 .header{ width:960px; margin:0 auto;}
-.logo{ float:left; background:#1491c1; width:300px; float:left;}
+.logo{ float:left; background:url("../images/small.jpg"); width:300px; float:left;}
 .logo h1{font-size:52px; text-align:center; padding:52px 0px 50px 0px;}
 
-.menu{ float:left;}
-.menu ul li{ list-style:none; float:left; border-right:#093e76 solid 1px; padding:115px 20px 30px 20px;}
-.menu ul li a{ text-decoration:none; color:#80d2f8; font-size:14px; text-align:center;}
-.menu ul li a:hover{ color:#1491c1;}
-.menu ul li a.active{ color:#1491c1;}
+.menu{ float:left }
+.menu{ list-style:none; float:left; border-right:#093e76 solid 1px; padding:55px 20px 30px 20px;}
+.menu{ text-decoration:none; color:#80d2f8; font-size:14px; text-align:center;border-radius: 5px; margin: 0 0 20px 0;}
+.menu a { display:inline-block; padding: 25px }
+.menu:hover{ color:#1491c1;}
+.menu.active{ color:#1491c1;}
 
 /*LEFTCOL*/
 .leftcol{ float:left; width:300px; overflow:hidden;}
@@ -77,7 +78,11 @@ h1{ float:top;}
 .box .title{margin-bottom:20px;}
 .box .title h1{ font-size:20px; font-weight:normal;}
 
-/*JavaScript*/
+/*INFOBOX*/
+#infoBox, #errorBox, #loadingBox{ width: 25%; solid: 3px; margin: 10px auto; color: white; text-align: center; padding: 5px; border-radius: 3px;}
+#loadingBox { background: #7CB3E9}
+#infoBox { background: #7CB3E9}
+#errorBox { background: #7CB3E9}
 
 /*NEWPOST*/
 

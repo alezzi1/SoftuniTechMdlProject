@@ -8,23 +8,32 @@
     <script src="scripts/app.js"></script>
 </head>
 <body>
+<header>
     <div class="header-wrap">
         <div class="header">
             <div class="logo"><h1>TopGames</h1></div>
             <div class="menu">
                 <ul>
-                    <li><a href="Home.html" id="home">Home</a></li>
-                    <li><a href="Top10.html" id="rates">Rates</a></li>
-                    <li><a href="NewPost.html" id="newPost">New Post</a></li>
-                    <li><a href="Posts.html" id="posts">Posts</a></li>
-                    <li><a href="Login.html" id="login">Log In</a></li>
-                    <li><a href="Registration.html" id="reg">Sing Up</a></li>
+                    <li><a href="#" id="link-Home">Home</a></li>
+                    <li><a href="#" id="link-Top10">Top 5 Games</a></li>
+                    <li><a href="#" id="link-NewPost">New Post</a></li>
+                    <li><a href="#" id="link-Posts">Posts</a></li>
+                    <li><a href="#" id="link-Login">Log In</a></li>
+                    <li><a href="#" id="link-Registration">Sing Up</a></li>
+                    <li><a href="#" id="link-Logout">Log Out</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <br>
-    <div class="wrap">
+</header>
+<main>
+    <section id="loadingBox">Loading...</section>
+    <section id="infoBox">Info</section>
+    <section id="errorBox">Error..</section>
+	
+	
+    <section id="home">
+        <div class="wrap">
         <div class="leftcol">
             <div class="block">
                 <div class="panel">
@@ -42,33 +51,8 @@
                     </div>
                 </div>
             </div>
-            <div class="block2">
-                <div class="title"><h1>New Games</h1>
-                    <div class="panel"><h3>Game1</h3>
-                        <img src="images/image1.jpg" alt="image" />
-                        <div class="content">
-                        <p>Game1 Game1 Game1 </p>
-                        <div class="button"><a href="#">More</a></div>
-                        </div>
-                    </div>
-                    <div class="panel"><h3>Game2</h3>
-                        <img src="images/image2.jpg" alt="image" />
-                        <div class="content">
-                            <p>Game2 Game2 Game2 </p>
-                            <div class="button"><a href="#">More</a></div>
-                        </div>
-                    </div>
-                    <div class="panel bor-bottm-non"><h3>Game3</h3>
-                        <img src="images/image3.jpg" alt="image" />
-                        <div class="content">
-                            <p>Game3 Game3 Game3 </p>
-                            <div class="button"><a href="#">More</a></div>
-                       </div>
-                    </div>
-                </div>
-            </div>
         </div><!--leftcol-->
-        <div class="rightcol">
+        <div id="rightcol">
             <div class="page-content">
                 <div class="panel mar-bottom">
                     <div class="title">
@@ -97,55 +81,409 @@
             </div>
         </div>
     </div><!--Rightcol-->
-    <div class="footer-wrap">
-        <div class="footer">
-            <div class="bolg">
+    </section>
+	
+	
+	
+    <section id="rates">
+        
+    </section>
+	
+	
+	
+    <section id="newPost">
+        <div class="wrap">
+    <div class="leftcol">
+        <div class="block">
+            <div class="panel">
                 <div class="title">
-                    <h1>Last Post</h1>
+                    <h1>Top5 Rating Games</h1>
                 </div>
-                <div class="panel mar-right115">
-                    <div class="content">
-                        <ul>
-                            <li>User<br/>Date</li>
-                        </ul>
-                        <p>Saita ne struvaaaaaaaaa</p>
-                        <p><a href="#">Read More + </a></p>
-                    </div>
-                </div>
-                <div class="panel">
-                    <div class="content">
-                        <ul>
-                            <li>User<br />STruva struva</li>
-                        </ul>
-                        <p><a href="#">Read More + </a></p>
-                    </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">gameOne</a></li>
+                        <li><a href="#">gameTwo</a></li>
+                        <li><a href="#">gameTree</a></li>
+                        <li><a href="#">gameFour</a></li>
+                        <li class="bor-bottom-non"><a href="#">gameFive</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="quickcontact">
+        </div>
+    </div><!--leftcol-->
+    <div class="rightcol">
+        <div class="page-content">
+            <div class="panel mar-bottom">
                 <div class="title">
-                    <h1>Quick Contact</h1>
+                    <h1>New Post Section</h1>
                 </div>
                 <div class="panel">
                     <div class="content">
+                        <form id="formCreatePost">
+                            <div class="Post-form mar-top30">
+                                <label> <span>Game name</span>
+                                    <input type="text" class="gameName" id="gameName" required/>
+                                </label>
+                                <!--<label> <span>Genre</span>
+                                    <input type="text" class="gameGanre" id="gameGanre" required/>
+                                </label>-->
+                                <label>
+                                    <span>Genre</span>
+                                    <select name="genre">
+                                        <option value="1">Action</option>
+                                        <option value="2">Strategy</option>
+                                        <option value="3">Racing</option>
+                                    </select>
+                                </label>
+                                <label> <span>Release date</span>
+                                    <input type="text" class="gameDate" id="gameDate" required/>
+                                </label>
+                                <label> <span>Developer</span>
+                                    <input type="text" class="developer" id="developer" required/>
+                                </label>
+                                <label> <span>Our raiting</span>
+                                    <input type="text" class="raiting" id="raiting" required/>
+                                </label>
+                                <label> <span>Review</span>
+                                    <textarea name="styled-textarea" id="post" cols="35" rows="10"></textarea>
+                                </label>
+                                <label><input type="submit" id="postButton" value="post"/></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="clearing"></div>
+            </div><!--page-->
+        </div>
+    </div>
+</div><!--Rightcol-->
+    </section>
+	
+	
+	
+    <section id="posts">
+        <div class="wrap">
+        <div class="leftcol">
+            <div class="block">
+                <div class="panel">
+                    <div class="title">
+                        <h1>Top5 Rating Games</h1>
+                    </div>
+                    <div class="content" id="tabs">
                         <ul>
-                            <li>For some qestions<br/>(for faster respons add some BEER!)</li>
+                            <li><a href="#tabs-1">Action Games</a></li>
+                            <li><a href="#tabs-2">Strategy Games</a></li>
+                            <li class="bor-bottm-non"><a href="#tabs-3">Racing Games</a></li>
                         </ul>
-                        <p>Post za contakt;
-                            Kutiq za kontakt</p>
-                        <p><span>Tel: (02) 123 456</span></p>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!--footer-->
-    <div class="copyright-wrap">
-        <div class="copyright">
-            <div class="content">
-                <p>© 2016 All Rights Reserved  |  Just f***ing up .... Public Free
-                    Designed and Idea by :<a href=" https://www.facebook.com/Alezzzzzi" class="active">  Alezzi. </a>
-                    Images From:<a href=" https://.google.bg">  Google. </a></p>
+        <div class="rightcol">
+            <div class="page-content">
+                <div class="panel mar-bottom">
+                    <div class="content" id="tabs-1">
+                        <h1>Top Action Games</h1>
+                        <div class="content mar-top"> <img src="images/newOverwatch.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Overwatch</h1>
+                            <h2>Release date: May 24, 2016 ▪ Developer: Blizzard ▪ Our review (88%)</h2>
+                            A great team shooter that emphasizes positioning, teamwork and tactics over agility and marksmanship, <a href="#" id="showTextLinkA1" onclick="showTextA1()">(read more)</a>
+                            <span id="hiddenTextA1" style="display:none">but still leaves room for players to grow in the latter department. There are still character tweaks to be made to ensure they’re continuously viable and
+                                fun and all create interesting dynamics, but it’s the sort of game you could tweak forever. Overwatch can't replace Team Fortress 2 for us, but it’s certainly recaptured the experience of
+                                getting a bunch of friends together for night-long sessions of the current top shooter. Competitive mode is out now, and we’re keen to earn some golden guns.</span>
+                        </div>
+                        <div class="clearing"></div>
+
+                        <div class="content mar-top"> <img src="images/theWitcher3.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>The Witcher 3:Blood and Wine</h1>
+                            <h2>Release date: May 31, 2016 ▪ Developer: CD Projekt RED ▪ Our review (94%)</h2>
+                            We're told that The Blood and Wine expansion for The Witcher 3: Wild Hunt marks the last great ride of Geralt of Rivia, <a href="#" id="showTextLinkA2" onclick="showTextA2()">(read more)</a>
+                            <span id="hiddenTextA2" style="display:none"> so far as developer CD Projekt Red is concerned. I like to think there are signs that this isn't the case, as much of its storyline revolves around the
+                                return of a friend long thought permanently lost. But even if it is, it's about as good as a sendoff as we could ask for. The sun may shine brighter here than it ever has for the Butcher of
+                                Blaviken, and there's a undercurrent of hope that's been lost in the flood of despair in previous entries, but fittingly enough, above all this is a tale of the pain of letting go.</span>
+                        </div>
+                        <div class="clearing"></div>
+
+                        <div class="content mar-top"> <img src="images/heartsOfIron4.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Doom</h1>
+                            <h2>Release date: May 12, 2016 ▪ Developer: id Software ▪ Our review (88%)</h2>
+                            Doom's reverence of a primordial aspect of FPS design—killing—borders on comical exaggeration with its <a href="#" id="showTextLinkA3" onclick="showTextA3()">(read more)</a>
+                            <span id="hiddenTextA3" style="display:none">fountains of demon blood and a main character who communicates by punching things. That fittingly fuels fast and fun combat indulging the nostalgia of
+                                id's run-and-gun lineage without smothering its metal brutality. Doom's first major update since launch adds a Photo mode for screenshots and ups the classic feel with an optional center-aligned
+                                weapon model.</span>
+                        </div>
+                        <div class="clearing"></div>
+                    </div><!--ActionGames-->
+                    <br>
+
+                    <div class="content" id="tabs-2">
+                        <h1>Top Strategy Games</h1>
+                        <div class="content mar-top"> <img src="images/newXcom2.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>XCOM 2</h1>
+                            <h2>Release date: Feb 4, 2016 ▪ Developer: Firaxis ▪ Our review (94%)</h2>
+                            It has been 20 years since humanity lost the war against the aliens. <a href="#" id="showTextLinkS1" onclick="showTextS1()">(read more)</a><span id="hiddenTextS1" style="display:none">
+                                A new order exists on Earth and the aliens have power over everything. They have brought in new technology and resources that promise a brighter future for the Earth, but they are concealing a
+                                very evil agenda. The disavowed XCOM forces must rise from the shadows and fight back to reclaim their home planet or die trying. Players take control of an alien ship that has been converted
+                                to their mobile headquarters. Combat enemy operations, guide your strike team and grow popular support as you inch your way to destroy the alien occupation.</span>
+                        </div>
+                        <div class="clearing"></div>
+
+                        <div class="content mar-top"> <img src="images/totalWar.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Total War: Warhammer</h1>
+                            <h2>Release date: May 24, 2016 ▪ Developer: Creative Assembly ▪ Our review (86%)</h2>
+                            The first game in the Warhammer series to feature a fantasy world filled with monsters, warriors, and heroes.<a href="#" id="showTextLinkS2" onclick="showTextS2()">(read more)</a><span
+                                id="hiddenTextS2" style="display:none">
+                                Warhammer is the 10th installment in the Total War series and players can control any of the four factions – the Empire, the Greenskins, the Dwarfs or the Vampire Counts. Warhammer brings back
+                                the tried and tested elements of the previous games like city-building, unit-building and diplomacy settings. However, there are a huge number of animations and over 30 different types of
+                                skeletons and body types added to the game.</span>
+                        </div>
+                        <div class="clearing"></div>
+
+                        <div class="content mar-top"> <img src="images/heartsOfIron4.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Hearts Of Iron 4</h1>
+                            <h2>Release date: June 6, 2016 ▪ Developer: Paradox ▪ Our review (88%)</h2>
+                            “The AI may not always be sensible, and maybe combat doesn't always seem the historically accurate,”<a href="#" id="showTextLinkS3" onclick="showTextS3()">(read more)</a><span id="hiddenTextS3"
+                                style="display:none">
+                                wrote Rob in our review, “but then, you might be playing a version of World War 2 where Italy broke away from Germany to create a new Roman Empire with Yugoslavia, and the Soviet Union was
+                                plunged into civil war and Stalin was deposed by 1942.”</span>
+                        </div>
+                        <div class="clearing"></div>
+                    </div><!--StategyGames-->
+                    <br>
+
+                    <div class="content" id="tabs-3">
+                        <h1>Top Racing Games</h1>
+                        <div class="content mar-top"> <img src="images/Shift2.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Shift 2</h1>
+                            <h2>Release date: Feb 4, 2016 ▪ Developer: Firaxis ▪ Our review (94%)</h2>
+                            Shift 2 might be the best compromise between realism and accessibility of any game on this list. <a href="#" id="showTextLinkR1" onclick="showTextR1()">(read more)</a>
+                            <span id="hiddenTextR1" style="display:none">It’s not just the ways the car handle — menacing, but capable — but the way it consistently thinks about what players need to perform at a high level.
+                                Rather than lock your view gazing out over the hood, or ask you to spring for TrackIR to let you turn your head, Shift 2 has a dynamic view that subtly changes based on context.</span>
+                        </div>
+                        <div class="clearing"></div>
+
+                        <div class="content mar-top"> <img src="images/driver.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Driver: San Francisco</h1>
+                            <h2>Release date: May 24, 2016 ▪ Developer: Creative Assembly ▪ Our review (86%)</h2>
+                            Every arcade racer should be as cool as this game. If Steve McQueen were digitized and turned into a videogame,<a href="#" id="showTextLinkR2" onclick="showTextR2()">(read more)</a>
+                            <span id="hiddenTextR2" style="display:none"> he would be Driver: San Francisco. While Driver: SF features cars and influences from a variety of eras, it approaches everything with a 70’s style. It
+                                loves American muscle, roaring engines, squealing tires, and the impossibly steep hills and twisting roads of San Francisco. It may have the single greatest soundtrack of any racing game, and
+                                some of the best event variety.</span>
+                        </div>
+                        <div class="clearing"></div>
+
+                        <div class="content mar-top"> <img src="images/dirtRally.jpg" width="150" height="150" class="float-left mar-right30"/>
+                            <h1>Dirt Rally</h1>
+                            <h2>Release date: June 6, 2016 ▪ Developer: Paradox ▪ Our review (88%)</h2>
+                            Codemasters’ Dirt Rally has surpassed its predecessor, Dirt 3, and is arguably the best game Codemasters have made in years.<a href="#" id="showTextLinkR3" onclick="showTextR3()">(read more)</a>
+                            <span id="hiddenTextR3" style="display:none">With a far more authentic handling model, Dirt Rally does away with many of the arcadey touches that continue to persist in the core series. That also
+                                makes it a proper rally game, in a way gamers haven't seen in a long while. It's not just that these races happen to be set on dirt tracks with loads and loads of sideways slidey driving, but
+                                that you're actually taking part in the kind of endurance racing that rallying is all about. You’ll have to take care of your car through every race stage, which introduces an element of
+                                strategy and resource management that's all too rare in sim-racing.</span>
+                        </div>
+                        <div class="clearing"></div>
+                    </div><!--RacingGames-->
+                    <div class="clearing"></div>
+                </div><!--page-->
+            </div>
+        </div><!--Rightcol-->
+
+        <script>
+            function showTextA1() {
+                document.getElementById('hiddenTextA1').style.display= 'inline';
+                document.getElementById('showTextLinkA1').style.display = 'none';
+            }
+            function showTextA2() {
+                document.getElementById('hiddenTextA2').style.display= 'inline';
+                document.getElementById('showTextLinkA2').style.display = 'none';
+            }
+            function showTextA3() {
+                document.getElementById('hiddenTextA3').style.display= 'inline';
+                document.getElementById('showTextLinkA3').style.display = 'none';
+            }
+            function showTextS1() {
+                document.getElementById('hiddenTextS1').style.display= 'inline';
+                document.getElementById('showTextLinkS1').style.display = 'none';
+            }
+            function showTextS2() {
+                document.getElementById('hiddenTextS2').style.display= 'inline';
+                document.getElementById('showTextLinkS2').style.display = 'none';
+            }
+            function showTextS3() {
+                document.getElementById('hiddenTextS3').style.display= 'inline';
+                document.getElementById('showTextLinkS3').style.display = 'none';
+            }
+            function showTextR1() {
+                document.getElementById('hiddenTextR1').style.display= 'inline';
+                document.getElementById('showTextLinkR1').style.display = 'none';
+            }
+            function showTextR2() {
+                document.getElementById('hiddenTextR2').style.display= 'inline';
+                document.getElementById('showTextLinkR2').style.display = 'none';
+            }
+            function showTextR3() {
+                document.getElementById('hiddenTextR3').style.display= 'inline';
+                document.getElementById('showTextLinkR3').style.display = 'none';
+            }
+        </script>
+    </div>
+    </section>
+	
+	
+	
+    <section id="login">
+        <div class="wrap">
+        <div class="leftcol">
+            <div class="block">
+                <div class="panel">
+                    <div class="title">
+                        <h1>Top5 Rating Games</h1>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">gameOne</a></li>
+                            <li><a href="#">gameTwo</a></li>
+                            <li><a href="#">gameTree</a></li>
+                            <li><a href="#">gameFour</a></li>
+                            <li class="bor-bottom-non"><a href="#">gameFive</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--leftcol-->
+        <div class="rightcol">
+            <div class="page-content">
+                <div class="panel mar-bottom">
+                    <div class="title">
+                        <h1>Please login</h1>
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            <form id="formLogin">
+                                <div class="Login-form mar-top30">
+                                    <label> <span>Username:</span>
+                                        <input type="text" class="input_text" id="loginUser" required/>
+                                    </label>
+                                    <label> <span>Password:</span>
+                                        <input type="password" class="input_text" id="loginPass" required/>
+                                    </label>
+                                    <label><input type="submit" id="loginButton" value="Login"/></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearing"></div>
+                </div><!--page-->
             </div>
         </div>
-    </div><!--copyright-wrap-->
+    </div><!--Rightcol-->
+    </section>
+	
+	
+	
+    <section id="reg">
+        <div class="wrap">
+    <div class="leftcol">
+        <div class="block">
+            <div class="panel">
+                <div class="title">
+                    <h1>Top5 Rating Games</h1>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">gameOne</a></li>
+                        <li><a href="#">gameTwo</a></li>
+                        <li><a href="#">gameTree</a></li>
+                        <li><a href="#">gameFour</a></li>
+                        <li class="bor-bottom-non"><a href="#">gameFive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!--leftcol-->
+    <div class="rightcol">
+        <div class="page-content">
+            <div class="panel mar-bottom">
+                <div class="title">
+                    <h1>Registration</h1>
+                </div>
+                <div class="panel">
+                    <div class="content">
+                        <form id="formRegister">
+                            <div class="Login-form mar-top30">
+                                <label> <span>Username:</span>
+                                    <input type="text" id="registerUser" class="input_text" required="required"/>
+                                </label>
+                                <label> <span>Password:</span>
+                                    <input type="password" id="registerPass" class="input_text" required="required"/>
+                                </label>
+                                <label><input type="submit" id="registerButton" value="Sing Up"/></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="clearing"></div>
+            </div><!--page-->
+        </div>
+    </div>
+</div><!--Rightcol-->
+    </section>
+	
+	
+	
+    <section id="logout">
+        
+    </section>
+</main>
+<div class="footer-wrap">
+    <div class="footer">
+        <div class="bolg">
+            <div class="title">
+                <h1>Last Post</h1>
+            </div>
+            <div class="panel mar-right115">
+                <div class="content">
+                    <ul>
+                        <li>User<br/>Date</li>
+                    </ul>
+                    <p>Saita ne struvaaaaaaaaa</p>
+                    <p><a href="#">Read More + </a></p>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="content">
+                    <ul>
+                        <li>User<br />STruva struva</li>
+                    </ul>
+                    <p><a href="#">Read More + </a></p>
+                </div>
+            </div>
+        </div>
+        <div class="quickcontact">
+            <div class="title">
+                <h1>Quick Contact</h1>
+            </div>
+            <div class="panel">
+                <div class="content">
+                    <ul>
+                        <li>For some qestions<br/>(for faster respons add some BEER!)</li>
+                    </ul>
+                    <p>Post za contakt;
+                        Kutiq za kontakt</p>
+                    <p><span>Tel: (02) 123 456</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--footer-->
+<div class="copyright-wrap">
+    <div class="copyright">
+        <div class="content">
+            <p>© 2016 All Rights Reserved  |  Just f***ing up .... Public Free
+                Designed and Idea by :<a href=" https://www.facebook.com/Alezzzzzi" class="active">  Alezzi. </a>
+                Images From:<a href=" https://.google.bg">  Google. </a></p>
+        </div>
+    </div>
+</div><!--copyright-wrap-->
 </body>
 </html>

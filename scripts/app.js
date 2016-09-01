@@ -27,12 +27,12 @@ function showHideMenuLinks() {
 function showInfo(message) {
     $('#infoBox').text(message);
     $('#infoBox').show();
-    setTimeout(function () { $('infoBox').fadeOut() }, 2500);
+    setTimeout(function () { $('#infoBox').fadeOut() }, 2000);
 }
 function showError(errorMsg) {
     $('#errorBox').text("Error: " + errorMsg);
     $('#errorBox').show();
-    setTimeout(function () { $('errorBox').fadeOut() }, 2500);
+    setTimeout(function () { $('#errorBox').fadeOut() }, 2000);
 }
 $(function () {
     showHideMenuLinks();
@@ -120,7 +120,7 @@ function register() {
     }
 }
 function showPostView() {
-    $('#Posts').empty();
+    $('#newPosts').empty();
     showView('viewPost');
     const kinveyBooksUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Posts";
     const kinveyAuthHeaders = {
@@ -137,7 +137,7 @@ function showPostView() {
 function loadGamesSuccess(Posts) {
     showInfo('Posts loaded.');
     if (Posts.length == 0) {
-        $('#Posts').text('No new posts on the site.');
+        $('#newPosts').text('No new posts on the site.');
     } else {
         let PostsTable = $('<table>')
             .append($('<tr>').append(
@@ -158,7 +158,7 @@ function loadGamesSuccess(Posts) {
                 $('<td>').text(Post.post))
             );
         }
-        $('#Posts').append(PostsTable);
+        $('#newPosts').append(PostsTable);
     }
 }
 function showNewPostView() {
